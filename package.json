@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "chart.js": "^4.4.0",
+    "chart.js": "^4.4.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.279.0",
@@ -21,6 +21,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/chart.js": "^2.9.41",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
