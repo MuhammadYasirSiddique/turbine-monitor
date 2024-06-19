@@ -1,16 +1,20 @@
-'use client'
+"use client";
 
-import Head from 'next/head';
-import Link from 'next/link';
-import { useState } from 'react';
+import Head from "next/head";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
   const [navbar, setNavbar] = useState(false);
-  const [screen, setScreen] = useState()
+  const [screen, setScreen] = useState();
 
   return (
     <div>
-      <nav className={`w-full bg-gray-600 shadow ${navbar ? 'fixed top-0 slide-down' : 'relative'}`}>
+      <nav
+        className={`w-full bg-gray-600 shadow ${
+          navbar ? "fixed top-0 slide-down" : "relative"
+        }`}
+      >
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -55,53 +59,65 @@ export default function Home() {
               </div>
             </div>
           </div>
-              <div className={`relative ${navbar ? 'block slide-down' : 'hidden' } md:block mx-5 ml-auto`}>
-                        <span className="absolute inset-y-0 left-0 flex items-center py-4">
-                            <button
-                                type="submit"
-                                className="p-2 focus:outline-none focus:ring"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="w-6 h-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    strokeWidth={2}
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                                    />
-                                </svg>
-                            </button>
-                        </span>
-                        <input
-                            type="search"
-                            name="Search"
-                            placeholder="Search..."
-                            className="w-full py-2 pl-10 text-sm rounded-md focus:outline-none"
-                        />
-                    </div>
+          <div
+            className={`relative ${
+              navbar ? "block slide-down" : "hidden"
+            } md:block mx-5 ml-auto`}
+          >
+            <span className="absolute inset-y-0 left-0 flex items-center py-4">
+              <button
+                type="submit"
+                className="p-2 focus:outline-none focus:ring"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </button>
+            </span>
+            <input
+              type="search"
+              name="Search"
+              placeholder="Search..."
+              className="w-full py-2 pl-10 text-sm rounded-md focus:outline-none"
+            />
+          </div>
           <div>
             <div
               className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? 'block slide-down z-50' : 'hidden'
+                navbar ? "block slide-down z-50" : "hidden"
               }`}
             >
               <ul className="items-center justify-center text-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <li className="text-white">
-                  <Link href="/">Home</Link>
+                  <Link href="/" onClick={() => setNavbar(false)}>
+                    Home
+                  </Link>
                 </li>
                 <li className="text-white">
-                  <Link href="/blogs">Blogs</Link>
+                  <Link href="/blogs" onClick={() => setNavbar(false)}>
+                    Blogs
+                  </Link>
                 </li>
                 <li className="text-white">
-                  <Link href="/about">About</Link>
+                  <Link href="/about" onClick={() => setNavbar(false)}>
+                    About
+                  </Link>
                 </li>
                 <li className="text-white">
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/contact" onClick={() => setNavbar(false)}>
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </div>
