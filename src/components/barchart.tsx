@@ -69,13 +69,11 @@ const BarChart: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 bg">
+    <div className="container mt-24 mx-auto p-4 bg">
       <h1 className="text-2xl font-bold mb-4">Chart.js with Next.js</h1>
-      <div className="flex flex-col lg:flex-row">
-        <div className="w-full lg:w-1/2 h-auto bg-slate-50 shadow-2xl mx-4 lg:mx-8 p-4">
-          <div className="overflow-x-auto">
-            <MyChart data={data} options={options} />
-          </div>
+      <div className="flex justify-center items-center">
+        <div className="w-full max-w-4xl h-96 bg-slate-50 shadow-2xl p-4">
+          <MyChart data={data} options={options} />
         </div>
       </div>
     </div>
